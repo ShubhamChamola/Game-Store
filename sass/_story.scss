@@ -1,0 +1,21 @@
+#story {
+  .col {
+    width: 150vw;
+    grid-template-columns: repeat(3, 1fr);
+    .game {
+      opacity: 0;
+      &:nth-child(1) {
+        background: url("../images/story-1.jpg");
+        background-size: 100% 100%;
+      }
+      &:nth-child(2) {
+        background: url("../images/story-2.jpg");
+        background-size: 100% 100%;
+      }
+      &:nth-child(3) {
+        background: url("../images/story-3.jpg");
+        background-size: 100% 100%;
+      }
+    }
+  }
+}

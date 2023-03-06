@@ -1,0 +1,229 @@
+@media screen and (max-width: 1300px) {
+  .footer {
+    .socials {
+      grid-template-columns: repeat(3, minmax(250px, 300px));
+    }
+  }
+  .features {
+    .horizontal-scroll {
+      left: 49.8%;
+    }
+  }
+}
+
+@media screen and (max-width: 1011px) {
+  .header {
+    .pages {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #fff;
+      width: 100vw;
+      height: 100vh;
+      padding: 6em 1.5em 1.5em 1.5em;
+      flex-direction: column;
+      z-index: 1;
+      display: none;
+      .close-menu {
+        display: flex !important;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        span {
+          width: 20px;
+          position: absolute;
+          top: 50%;
+          right: 50%;
+          transform: translate(-50%, -50%);
+          transform-origin: center;
+          transform: rotate(45deg);
+          &:nth-child(2) {
+            width: 23px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      a {
+        font-size: clamp(30px, 6vw, 2.5rem) !important;
+        font-weight: 500 !important;
+        margin-bottom: 0.75em;
+        color: black;
+
+        .border {
+          display: none;
+        }
+      }
+    }
+    .cart {
+      .hamburger-menu {
+        display: flex !important;
+      }
+    }
+  }
+  .features {
+    .horizontal-scroll {
+      left: 49%;
+    }
+    .games {
+      .col {
+        .game {
+          span {
+            font-size: clamp(0.8rem, 1vw, 1.2rem);
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    .socials {
+      grid-template-columns: minmax(250px, 350px) minmax(200px, 250px);
+      .mail {
+        grid-row: 3/4;
+        border: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .features {
+    position: relative;
+    .heading {
+      a {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(30px);
+        p {
+          font-size: clamp(18px, 4vw, 22px);
+        }
+      }
+    }
+    .horizontal-scroll {
+      display: none;
+    }
+    .games {
+      .col {
+        width: 400vw;
+        column-gap: clamp(3em, 4vw, 6em);
+        .game {
+          span {
+            font-size: clamp(0.85rem, 2vw, 1.35rem);
+          }
+        }
+      }
+    }
+  }
+  #story {
+    .col {
+      width: 300vw;
+    }
+  }
+  .mission {
+    margin-top: clamp(5em, 7vw, 9em);
+    background-position: 50% 50%;
+    background-size: 150%;
+
+    img {
+      display: none;
+    }
+
+    .text {
+      flex-direction: column;
+      position: static;
+
+      p:first-child {
+        padding-bottom: clamp(5em, 7vw, 10em);
+      }
+
+      .mis {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding-top: clamp(3em, 7vw, 10em);
+        p {
+          padding: 0;
+        }
+      }
+    }
+  }
+  .footer {
+    margin-top: clamp(5em, 7vw, 9em); //fixit
+
+    .imgs {
+      grid-row: 2/3;
+      grid-column: 1/3;
+      width: 100%;
+      display: flex;
+      margin-left: 0;
+      grid-auto-rows: auto;
+      padding: clamp(1em, 3vw, 1.5em) 0;
+
+      .img {
+        padding: 1em;
+        img:first-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .socials {
+      grid-row: 3/4;
+      margin-top: 1em;
+      .mail {
+        input::placeholder {
+          font-size: clamp(1.1rem, 2vw, 1.2rem);
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:485px) {
+  .features {
+    .horizontal-scroll {
+      left: 50%;
+    }
+  }
+  .header {
+    .video {
+      margin-top: clamp(1.75em, 3vw, 4em);
+    }
+  }
+  .mission {
+    background-size: 250%;
+    margin-top: clamp(5em, 6vw, 8em);
+  }
+  .footer {
+    .socials {
+      grid-template-columns: 1fr;
+      .social {
+        padding-bottom: 1.75em;
+        p {
+          padding-right: 0;
+        }
+      }
+      .mail {
+        padding-bottom: 1em;
+      }
+      .qna {
+        grid-row: 4/5;
+        border: 0;
+        margin: 0;
+        span {
+          margin-bottom: clamp(1em, 3vw, 1.25em);
+        }
+      }
+    }
+
+    .imgs {
+      .img {
+        padding: 0;
+
+        &:first-child {
+          margin-right: 1em;
+        }
+      }
+    }
+  }
+}

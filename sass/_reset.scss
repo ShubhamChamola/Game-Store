@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Variables
+$primary-clr: #000000;
+
+html {
+  font-size: 16px;
+  font-family: "Urbanist", sans-serif;
+
+  body {
+    width: 100%;
+    height: 100%;
+    color: $primary-clr;
+
+    section {
+      padding: clamp(10px, 4%, 4em);
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .container {
+      overflow: hidden;
+      display: inline-block;
+    }
+
+    .container-text {
+      position: relative;
+      bottom: 0;
+      display: inline-block;
+    }
+
+    a {
+      text-decoration: none;
+      color: $primary-clr;
+      position: relative;
+      padding-bottom: clamp(0.2em, 0.4vw, 0.4em);
+      overflow: hidden;
+      display: inline-block;
+      cursor: pointer !important;
+    }
+
+    .border {
+      transform-origin: right;
+      height: 1px;
+      width: 100%;
+      background-color: black;
+      position: absolute;
+      left: -100%;
+      bottom: 0;
+      z-index: 2;
+    }
+  }
+
+  .stop-scrolling {
+    overflow: hidden;
+  }
+}

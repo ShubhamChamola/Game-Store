@@ -1,0 +1,147 @@
+@mixin link {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  cursor: pointer;
+  i {
+    font-size: 1.2rem;
+    margin-left: 1em;
+  }
+}
+
+.features {
+  padding: 0;
+  padding-top: clamp(10px, 4%, 2.5em);
+  padding-bottom: clamp(10px, 4%, 4em);
+  position: relative;
+
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: clamp(1em, 4vw, 4em);
+    margin-right: clamp(10px, 4%, 4em);
+    margin-left: clamp(10px, 4%, 4em);
+
+    h3 {
+      font-size: clamp(1.75rem, 4vw, 5rem);
+      font-weight: 600;
+    }
+
+    a {
+      display: block;
+      transform: translateY(4px);
+      p {
+        @include link;
+      }
+    }
+  }
+
+  .horizontal-scroll {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: absolute;
+    width: 97.5%;
+    z-index: 1;
+    top: 56%;
+    left: 50.5%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    div {
+      padding: 0.65em 0.8em;
+      background: black;
+      text-align: center;
+      border-radius: 50%;
+      cursor: pointer;
+      i {
+        color: #fff;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .games {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .col {
+      width: 200vw;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding-right: clamp(10px, 4%, 4em);
+      padding-left: clamp(10px, 4%, 4em);
+      column-gap: clamp(2em, 5vw, 6em);
+
+      .game {
+        position: relative;
+        padding-top: clamp(20px, 5vw, 4em);
+        padding-bottom: clamp(20px, 5vw, 4em);
+        box-sizing: content-box;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: 100% 100%;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:nth-child(1) {
+          background: url("../images/game-1.jpg");
+          background-size: 100% 100%;
+        }
+        &:nth-child(2) {
+          background: url("../images/game-2.jpg");
+          background-size: 100% 100%;
+        }
+        &:nth-child(3) {
+          background: url("../images/game-3.jpg");
+          background-size: 100% 100%;
+        }
+        &:nth-child(4) {
+          background: url("../images/game-4.jpg");
+          background-size: 100% 100%;
+        }
+
+        &-bg {
+          width: 100%;
+          opacity: 0;
+        }
+        .container {
+          position: absolute;
+          padding: 0.25em 0.4em;
+          border-radius: clamp(0.5px, 0.15vw, 5px);
+          font-size: clamp(0.45rem, 1vw, 1.2rem);
+          background: rgba(255, 255, 255, 0.5);
+          font-weight: 700;
+          color: black;
+        }
+
+        .stock {
+          top: 0;
+          left: 0;
+          margin: clamp(0.3em, 2vw, 2em) 0 0 clamp(0.3em, 2vw, 2em);
+        }
+        .name {
+          margin: 0 0 clamp(0.3em, 2vw, 2em) clamp(0.3em, 2vw, 2em);
+          bottom: 0;
+          left: 0;
+        }
+        .pricing {
+          margin: 0 clamp(0.3em, 2vw, 2em) clamp(0.3em, 2vw, 2em) 0;
+          bottom: 0;
+          right: 0;
+        }
+        .date {
+          margin: clamp(0.3em, 2vw, 2em) clamp(0.3em, 2vw, 2em) 0 0;
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}

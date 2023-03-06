@@ -1,0 +1,41 @@
+.mission {
+  position: relative;
+  background: url("../images/mission-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0%;
+  padding: 0;
+  margin: clamp(2em, 4vw, 6em) 0 clamp(2em, 4vw, 6em) 0;
+  img {
+    opacity: 0;
+    width: 80%;
+  }
+
+  .text {
+    padding: clamp(10px, 4%, 4em);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    p {
+      flex: 1;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: clamp(1.75rem, 3.5vw, 5rem);
+      font-weight: 500;
+    }
+    .mis {
+      text-align: end;
+      flex: 1;
+      a {
+        .border {
+          background: rgba(255, 255, 255, 0.7);
+        }
+        p {
+          @include link;
+        }
+      }
+    }
+  }
+}
